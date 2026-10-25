@@ -1,0 +1,43 @@
+{
+  "id": "E005",
+  "title": "질량유량 계산기",
+  "inputs_text": "해당 단면 밀도 ρ [kg/m³], 체적유량 Q [m³/s]",
+  "formula": "ṁ = ρ Q",
+  "output_text": "질량유량 ṁ [kg/s]",
+  "assumptions": "ρ>0. 기체 표준상태 유량과 실제상태 밀도를 섞지 않는다. 단면 평균으로 취급 가능한 상태만 계산한다.",
+  "purpose": "질량유량 환산 / 가스 공급·물질수지 입력값 확인",
+  "sources": [
+    {
+      "label": "NASA Glenn · Mass Flow Rate",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/mass-flow-rate/"
+    }
+  ],
+  "slug": "eng-mass-flow",
+  "category": "유체",
+  "result_label": "질량유량 ṁ",
+  "result_dimension": "massFlow",
+  "fields": [
+    {
+      "key": "rho",
+      "label": "해당 단면 밀도 ρ",
+      "dimension": "density",
+      "example": 1000,
+      "constraint": "positive",
+      "display_unit": "kgm3",
+      "display_value": "1000"
+    },
+    {
+      "key": "q",
+      "label": "실제 상태 체적유량 Q",
+      "dimension": "flow",
+      "example": 0.002,
+      "constraint": "signed",
+      "display_unit": "m3s",
+      "display_value": "0.002"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-mass-flow/",
+  "repository": "https://github.com/NaNaCompany/eng-mass-flow",
+  "condition": "",
+  "output_unit": "kgs"
+}
